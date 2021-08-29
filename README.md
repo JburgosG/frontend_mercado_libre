@@ -23,7 +23,7 @@ Adicionalmente pensando en la escalabilidad y performance del proyecto, este se 
 
 ### Nota
 
-Para el correcto funcionamiento del proyecto es necesario clonar y desplegar correctamente en nuestro equipo local la capa Backend https://github.com/JburgosG/app_mercado_libre.git
+Para el correcto funcionamiento del proyecto es necesario clonar y desplegar correctamente en nuestro equipo local la capa Backend https://github.com/JburgosG/backend_mercado_libre.git
 
 Ejecución:
 
