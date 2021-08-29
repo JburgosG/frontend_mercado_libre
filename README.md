@@ -19,6 +19,8 @@ En este proyecto se da solución al componente Frontend del test práctico para 
 * Babel (Transformación del código a JS)
 * Standard Lint (Buenas prácticas de desarrollo)
 
+Adicionalmente pensando en la escalabilidad y performance del proyecto, este se estructuro de tal forma que pueda crecer sin perjudicar la complejidad del código y a su vez haciendo uso de React.Lazy damos prioridad a la carga de contenido bajo demanda por parte del usuario.
+
 ### Nota
 
 Para el correcto funcionamiento del proyecto es necesario clonar y desplegar correctamente en nuestro equipo local la capa Backend https://github.com/JburgosG/app_mercado_libre.git
