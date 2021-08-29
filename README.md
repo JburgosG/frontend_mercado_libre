@@ -17,6 +17,7 @@ En este proyecto se da solución al componente Frontend del test práctico para 
 * React Helmet (Optimización del SEO)
 * Webpack (Despliegue modo Dev)
 * Babel (Transformación del código a JS)
+* Standard Lint (Buenas prácticas de desarrollo)
 
 ### Nota
 
