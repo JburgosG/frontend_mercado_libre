@@ -30,9 +30,9 @@ export default (props) => {
       />
 
       <SearchBox />
-      <div className='row mb-3'>
+      <div className='mb-3'>
         <div className='container justify-content-center d-flex'>
-          <div className='col-md-8'>
+          <div className='col-md-10'>
             {!isLoading && <Breadcrumb />}
             <div className='card mt-3'>
               {!isLoading ? <Detail item={product} /> : <Loading />}

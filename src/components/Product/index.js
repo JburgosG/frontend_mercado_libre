@@ -12,15 +12,18 @@ export const Product = (props) => {
         <div className='row mx-3 py-3 border-bottom'>
           <div className='col-lg-2 px-0'>
             <Img
-              className='card-img-right rounded'
+              width='auto'
+              height='auto'
+              className='card-img-right rounded img-fluid'
               src={item.picture}
+              alt={item.title}
             />
           </div>
           <div className='col-lg-8 mt-3'>
             <Price className='mb-3 text-dark'>
               {currencyFormat(item.price.amount)}
             </Price>
-            {item.free_shipping && <img src={shipping} className='mx-2' />}
+            {item.free_shipping && <img src={shipping} className='mx-2' alt='Free Shipping' width='auto' height='auto' />}
             <div className='row'>
               <span className='mt-3 text-dark'>{item.title}</span>
               <span className='text-dark'>Estado {item.condition && item.condition.value_name}!</span>

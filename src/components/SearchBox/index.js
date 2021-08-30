@@ -5,7 +5,7 @@ import { Link, useHistory } from 'react-router-dom'
 import logo from '../../../assets/Logo_ML.png'
 import searchIcon from '../../../assets/ic_Search.png'
 
-export const SearchBox = (props) => {
+export const SearchBox = () => {
   const history = useHistory()
   const [search, setSearch] = useState('')
 
@@ -14,6 +14,8 @@ export const SearchBox = (props) => {
       <div className='container d-flex justify-content-center align-items-center'>
         <Link className='navbar-brand' to='/'>
           <img
+            width='auto'
+            height='auto'
             src={logo}
             alt='Mercado Libre Logo'
           />
@@ -29,6 +31,8 @@ export const SearchBox = (props) => {
               />
               <Button className='btn' type='button' onClick={() => onClickHandler(search.target, history)}>
                 <img
+                  width='auto'
+                  height='auto'
                   src={searchIcon}
                   alt='Search Icon'
                 />
