@@ -54,7 +54,7 @@ export default (props) => {
                   <h5>No se encontraron coincidencias.</h5>
                 </div>
               )}
-              {!isLoading ? <ProductList items={products} /> : <Loading />}
+              {!isLoading ? <ProductList items={products} categories={categories} /> : <Loading />}
             </div>
           </div>
         </div>

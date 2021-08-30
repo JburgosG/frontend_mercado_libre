@@ -10,10 +10,12 @@ import { Breadcrumb } from '../components/Breadcrumb'
 export default (props) => {
   const [product, setProduct] = useState(null)
   const [isLoading, setIsLoading] = useState(true)
+  const [categories, setCategories] = useState(null)
 
   useEffect(() => {
     if (props.match.params && props.match.params.id) {
       getProduct(props.match.params.id).then((resp) => {
+        setCategories(getLocalStorage())
         setProduct(resp.data.data)
         setIsLoading(false)
       }).catch((err) => {
@@ -21,6 +23,14 @@ export default (props) => {
       })
     }
   }, [props.match.params])
+
+  const getLocalStorage = () => {
+    try {
+      return JSON.parse(window.localStorage.getItem('breadcrumb'))
+    } catch (e) {
+      return null
+    }
+  }
 
   return (
     <section>
@@ -33,7 +43,7 @@ export default (props) => {
       <div className='mb-3'>
         <div className='container justify-content-center d-flex'>
           <div className='col-md-10'>
-            {!isLoading && <Breadcrumb />}
+            {!isLoading && <Breadcrumb categories={categories} />}
             <div className='card mt-3'>
               {!isLoading ? <Detail item={product} /> : <Loading />}
             </div>
